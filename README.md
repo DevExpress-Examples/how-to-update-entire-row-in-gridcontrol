@@ -6,9 +6,7 @@ In default mode, changes made via [in-place editors](https://docs.devexpress.com
 
 To activate **Edit Entire Row** mode, use the [TableView.ShowUpdateRowButtons](https://docs.devexpress.com/WPF/DevExpress.Xpf.Grid.TableView.ShowUpdateRowButtons) / [TreeListView.ShowUpdateRowButtons](https://docs.devexpress.com/WPF/DevExpress.Xpf.Grid.TableView.ShowUpdateRowButtons) property.
 
-When you change cell values within a row, the GridControl “freezes” the UI. You cannot navigate away from the edited row until you record or cancel changes.
-
-To post changes made, click the **Update** button. If you click the **Cancel** button, changes will be discarded.
+When you change cell values within a row, the GridControl “freezes” the UI. You cannot navigate away from the edited row until you record or cancel changes. To post changes made, click the **Update** button. If you click the **Cancel** button, changes will be discarded.
 
 The GridControl in this example is bound to Entity Framework:
 
