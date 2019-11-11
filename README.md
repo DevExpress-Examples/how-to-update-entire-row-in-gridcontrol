@@ -45,4 +45,4 @@ void TableView_ValidateRow(object sender, GridRowValidationEventArgs e) {
 }
 ```
 
-If an error occurs, the GridControl will allow you to correct values or click the Cancel button to return the previous value.
+If an error occurs, the GridControl will allow you to correct values or click the **Cancel** button to return the previous value.
