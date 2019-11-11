@@ -10,7 +10,7 @@ When you change cell values within a row, the GridControl “freezes” the UI. 
 
 The GridControl in this example is bound to Entity Framework:
 
-```charp
+```csharp
 public MainWindow() {
     InitializeComponent();
     var context = new IssuesContext();
@@ -29,7 +29,7 @@ When you make changes to grid values, changes are made only to in-memory replica
                ValidateRow="TableView_ValidateRow" />
 ```
 
-```charp
+```csharp
 void TableView_ValidateRow(object sender, GridRowValidationEventArgs e) {
     var issue = (Issue)e.Row;
     using(var context = new IssuesContext()) {
