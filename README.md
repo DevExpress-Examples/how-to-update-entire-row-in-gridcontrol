@@ -12,21 +12,26 @@ To post changes made, click the **Update** button. If you click the **Cancel** b
 
 The GridControl in this example is bound to Entity Framework:
 
-  public MainWindow() {
-      InitializeComponent();
-      var context = new IssuesContext();
-      grid.ItemsSource = context.Issues.ToArray();
-  }
+```charp
+public MainWindow() {
+    InitializeComponent();
+    var context = new IssuesContext();
+    grid.ItemsSource = context.Issues.ToArray();
+}
 
-  public class IssuesContext : DbContext { 
-      // ... 
-  }
+public class IssuesContext : DbContext { 
+    // ... 
+}
+```
 
 When you make changes to grid values, changes are made only to in-memory replicas, not to the actual data in the database. To save changes and intercept possible database errors, handle the [GridViewBase.ValidateRow](https://docs.devexpress.com/WPF/DevExpress.Xpf.Grid.GridViewBase.ValidateRow) event and explicitly call ***SaveChanges*** on the ***DataContext***:
 
+```xml
 <dxg:TableView ShowUpdateRowButtons="OnCellEditorOpen" 
                ValidateRow="TableView_ValidateRow" />
+```
 
+```charp
 void TableView_ValidateRow(object sender, GridRowValidationEventArgs e) {
     var issue = (Issue)e.Row;
     using(var context = new IssuesContext()) {
@@ -40,5 +45,6 @@ void TableView_ValidateRow(object sender, GridRowValidationEventArgs e) {
         }
     }
 }
+```
 
 If an error occurs, the GridControl will allow you to correct values or click the Cancel button to return the previous value.
