@@ -1,6 +1,6 @@
 # How to Edit an Entire Row and Post Changes to a Database
 
-The GridControl supports the **Edit Entire Row** mode.
+The GridControl supports the [Edit Entire Row](https://docs.devexpress.com/WPF/6606/controls-and-libraries/data-grid/data-editing-and-validation/modify-cell-values/inplace-editors#edit-entire-row) mode.
 
 In default mode, changes made via [in-place editors](https://docs.devexpress.com/WPF/6606/controls-and-libraries/data-grid/data-editing-and-validation/modify-cell-values/inplace-editors) are immediately posted to your data source. Unlike default mode, **Edit Entire Row** requires users to press the **Update** button to explicitly post changes to your data source.
 
