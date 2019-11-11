@@ -24,7 +24,7 @@ public class IssuesContext : DbContext {
 }
 ```
 
-When you make changes to grid values, changes are made only to in-memory replicas, not to the actual data in the database. To save changes and intercept possible database errors, handle the [GridViewBase.ValidateRow](https://docs.devexpress.com/WPF/DevExpress.Xpf.Grid.GridViewBase.ValidateRow) event and explicitly call ***SaveChanges*** on the ***DataContext***:
+When you make changes to grid values, changes are made only to in-memory replicas, not to the actual data in the database. To save changes and intercept possible database errors, handle the [GridViewBase.ValidateRow](https://docs.devexpress.com/WPF/DevExpress.Xpf.Grid.GridViewBase.ValidateRow) event and explicitly call **SaveChanges** on the **DataContext**:
 
 ```xml
 <dxg:TableView ShowUpdateRowButtons="OnCellEditorOpen" 
